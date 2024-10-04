@@ -3,10 +3,10 @@ import time
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_chroma import Chroma
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+from langchain_chroma import Chroma
 import chromadb
 chromadb.api.client.SharedSystemClient.clear_system_cache()
 from langchain_google_genai import ChatGoogleGenerativeAI
