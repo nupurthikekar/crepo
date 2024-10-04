@@ -7,7 +7,7 @@ from langchain_chroma import Chroma
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-import chromadb==0.3.29
+import chromadb
 chromadb.api.client.SharedSystemClient.clear_system_cache()
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains import create_retrieval_chain
